@@ -30,6 +30,7 @@ mainMechanics(endpoint);
 // осуществляется поиск ✅
 form.onsubmit = (e) => {
   e.preventDefault();
+  cardsContainer.scrollTop = 0;
   cardsContainer.textContent = '';
   [...videoContainer.children].forEach((el) => {
     el.className === 'error' && el.remove();

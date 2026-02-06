@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -47,11 +47,12 @@ ol {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "result details";
-  align-items: end;
   gap: 30px;
+  height: 540px;
 }
 .result {
   grid-area: result;
+  align-self: end;
 }
 .content__details {
   grid-area: details;

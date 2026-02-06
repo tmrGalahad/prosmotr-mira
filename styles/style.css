@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .title, .content__video-card-title {
   font-family: 'Oswald', sans-serif;
@@ -38,17 +41,13 @@ ul,
 ol {
   list-style: none;
 }
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .content {
   display: grid;
   grid-template-columns: 1fr 400px;
   grid-template-areas: "result details";
   gap: 30px;
-  height: 540px;
+  height: 534px;
 }
 .result {
   grid-area: result;
@@ -63,7 +62,7 @@ ol {
 .result__video-container {
   position: relative;
   inline-size: 711px;
-  block-size: 386px;
+  block-size: 400px;
   margin-bottom: 16px;
 }
 .result__video {
@@ -74,13 +73,14 @@ ol {
 .content__list {
   position: relative;
   max-height: 300px;
+  min-height: 300px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 .content__list-item {
-  padding: 0 3px;
+  padding: 0;
 }
 .content__list > li:not(.content__list-item) {
   margin-top: -30px;
@@ -98,21 +98,18 @@ ol {
 .content__video-card-thumbnail {
   inline-size: 194px;
   block-size: 103px;
-  object-fit: cover;
-  object-position: center;
   flex-shrink: 0;
 }
 .content__video-card-description-container {
   flex-grow: 1;
 }
 .content__video-card-title {
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 30px;
+  line-height: 35px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: uppercase;
-  margin-bottom: 6px;
 }
 .content__video-card-description-container {
   flex-grow: 1;
@@ -232,11 +229,16 @@ ol {
 }
 .more-button {
   width: 100%;
+  margin-top: 30px;
+  height: 35px;
 }
 .button:hover {
   text-decoration: underline;
   outline: 1px solid #fff;
   outline-offset: 2px;
+}
+.more-button:hover {
+  outline: none;
 }
 .button:active {
   background-color: #545050;
